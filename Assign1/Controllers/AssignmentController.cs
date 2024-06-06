@@ -98,7 +98,7 @@ namespace Assign1.Controllers
             return divide;
         }
         /// <summary>
-            /// Take user input and return three lines of cost breakdown for hosting their site.
+        /// Take user input and return three lines of cost breakdown for hosting their site.
         /// </summary>
         /// <param name="id">how many days</param>
         /// <param name="fn">forthnight</param>
@@ -114,6 +114,10 @@ namespace Assign1.Controllers
         ///     GET : /api/HostingCost/14 -> "2 fortnights at $5.50/FN = 11.00 CAD HST 13% = 1.43 CAD Total = 12.43"
         ///     GET : /api/HostingCost/28 -> "3 fortnights at $5.50/FN = 16.50 CAD HST 13% = 2.14 CAD Total = 18.64"
         /// </examples>
+        /// <sources>
+        ///     MATH -> https://www.w3schools.com/cs/cs_math.php
+        ///     .ToString -> https://learn.microsoft.com/en-us/dotnet/api/system.object.tostring?view=net-8.0
+        /// </sources>
         [Route("api/HostingCost/{id}")]
         [HttpGet]
         public IEnumerable<string> HostingCost(int id) {
